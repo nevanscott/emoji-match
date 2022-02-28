@@ -73,6 +73,16 @@ body {
   justify-content: center;
   font-size: 3rem;
 }
+@media screen and (min-width: 30rem) {
+  .card {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 40rem) {
+  .card {
+    font-size: 5rem;
+  }
+}
 
 .card.visible {
   background-color: inherit;
