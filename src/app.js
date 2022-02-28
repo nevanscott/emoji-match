@@ -86,7 +86,7 @@ class Board {
 
   attachHandlers() {
     this.root.addEventListener('click', (e) => {
-      if(!this.checking) {
+      if(!this.checking && !e.target.classList.contains('visible')) {
         this.makeGuess({
           row: e.target.dataset.row,
           col: e.target.dataset.col
