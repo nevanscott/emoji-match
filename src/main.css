@@ -1,0 +1,70 @@
+:root {
+  --color: black;
+  --canvas: white;
+
+  background-color: var(--canvas);
+  color: var(--color);
+  font-family: system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: white;
+    --canvas: black;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.board {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  background-color: darkslateblue;
+  background-color: darkslategrey;
+  background-color: firebrick;
+  background-color: indigo;
+  background-color: brown;
+  background-color: darkolivegreen;
+  background-color: midnightblue;
+  background-image:
+    repeating-linear-gradient(120deg, rgba(255,255,255,.2), rgba(255,255,255,.2) 1px, transparent 1px, transparent 30px),
+    repeating-linear-gradient(60deg, rgba(255,255,255,.2), rgba(255,255,255,.2) 1px, transparent 1px, transparent 30px),
+    linear-gradient(60deg, rgba(0,0,0,.2) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.2) 75%, rgba(0,0,0,.2)),
+    linear-gradient(120deg, rgba(0,0,0,.2) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.2) 75%, rgba(0,0,0,.2));
+  background-size: 35px 60px;
+  background-position: center center;
+  border: solid 2px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-indent: -9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  width: 2em;
+  height: 2.5em;
+}
+
+.card.visible {
+  background-color: inherit;
+  background-image: none;
+  text-indent: 0;
+}

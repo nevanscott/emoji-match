@@ -1,0 +1,16 @@
+{
+  "name": "emoji-match",
+  "description": "",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "Nevan Scott",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
