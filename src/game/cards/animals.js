@@ -33,7 +33,7 @@ export default [
   },
   {
     emoji: '🐊',
-    background: 'olivegreen'
+    background: 'olivedrab'
   },
   {
     emoji: '🦏',
