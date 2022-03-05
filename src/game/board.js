@@ -2,13 +2,13 @@ import chunk from '../lib/chunk';
 import shuffle from '../lib/shuffle';
 
 export default class {
-  constructor({ root, emojis, rows, cols }) {
+  constructor({ root, cards, rows, cols }) {
     this.root = root;
     this.checking = false;
     this.count = Math.floor(rows * cols / 2);
     this.guesses = [];
-    const cards = shuffle([...emojis]).slice(0, this.count);
-    this.board = this.createBoard({ cards, rows, cols });
+    this.cards = shuffle([...cards]).slice(0, this.count);
+    this.board = this.createBoard({ cards: this.cards, rows, cols });
 
     this.render();
     this.attachHandlers();
@@ -27,8 +27,8 @@ export default class {
             `
               <div class="row">
                 ${
-                  row.map((item, j) =>
-                    `<div class="card" data-row="${i}" data-col="${j}">${ item }</div>`
+                  row.map(({ emoji, background }, j) =>
+                    `<div class="card" data-row="${i}" data-col="${j}" style="--background: ${ background };">${ emoji }</div>`
                   ).join(``)
                 }
               </div>

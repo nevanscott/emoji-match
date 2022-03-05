@@ -86,7 +86,7 @@ body {
 }
 
 .card.visible {
-  background-color: inherit;
+  background-color: var(--background, inherit);
   background-image: none;
   text-indent: 0;
 }
