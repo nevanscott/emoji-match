@@ -60,7 +60,9 @@ export default class {
         return;
       } else {
         this.checking = true;
+        this.shakeCard(thisGuess);
         setTimeout(() => {
+          this.removeShakeCard(thisGuess);
           this.hideCard(thisGuess);
           this.hideCard(lastGuess);
           this.checking = false;
@@ -79,6 +81,14 @@ export default class {
 
   hideCard({ row, col }) {
     this.getCard({ row, col }).classList.remove('visible');
+  }
+
+  shakeCard({ row, col }) {
+    this.getCard({ row, col }).classList.add('wrong');
+  }
+
+  removeShakeCard({ row, col }) {
+    this.getCard({ row, col }).classList.remove('wrong');
   }
 
   attachHandlers() {
